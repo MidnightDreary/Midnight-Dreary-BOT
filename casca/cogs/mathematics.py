@@ -37,7 +37,7 @@ class FunctionMathematics:
         try:
             await self.bot.say(faces[choice])
         except:
-            await self.bot.say("ERROR OCCURED")
+            await self.bot.say("ERROR OCCURRED")
 
     @commands.command(name="p_index", pass_context=True)
     async def p_index(self, ctx):
@@ -83,9 +83,9 @@ class FunctionMathematics:
         await self.bot.delete_message(ctx.message)
         suggestion_file = open("suggestion.txt", "a+")
         if "\n" not in suggestion:
-            suggestion_file.write("[" + time.strftime("%d.%m.%y %H:%M:%S") + "] " + suggestion + "\n")
+            suggestion_file.write("[{}] {} \n".format(time.strftime("%d.%m.%y %H:%M:%S"), suggestion))
         else:
-            suggestion_file.write("[" + time.strftime("%d.%m.%y %H:%M:%S") + "] " + suggestion)
+            suggestion_file.write("[{}] {}".format(time.strftime("%d.%m.%y %H:%M:%S"), suggestion))
         suggestion_file.close()
 
     @commands.command(aliases=["learn"], pass_context=True)
@@ -93,11 +93,11 @@ class FunctionMathematics:
         "Displays a random fact"
         if number == 0:
             await self.bot.delete_message(ctx.message)
-            await self.bot.say("```" + random.choice(facts) + "```")
+            await self.bot.say("```{}```".format(random.choice(facts)))
         else:
             if number in range(1, len(facts) + 1):
                 await self.bot.delete_message(ctx.message)
-                await self.bot.say("```" + facts[number - 1] + "```")
+                await self.bot.say("```{}```".format(facts[number - 1]))
 
     @commands.command(name="rich", pass_context=True)
     async def special(self, ctx, title: str, name: str, *, value: str):
@@ -139,7 +139,7 @@ class FunctionMathematics:
         await self.bot.delete_message(ctx.message)
         suggestion_file = open("suggestion.txt", "r")
         suggestion_text = suggestion_file.read()
-        await self.bot.say("```" + suggestion_text + "```")
+        await self.bot.say("```{}```".format(suggestion_text ))
         suggestion_file.close()
 
 
