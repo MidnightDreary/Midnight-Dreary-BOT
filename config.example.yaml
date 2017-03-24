@@ -1,0 +1,11 @@
+## Example config file.
+bot:
+
+  # The token to use to log in.
+  token: <your token>
+
+# Use uvloop. This is disabled by default.
+use_uvloop: false
+
+# The default log level.
+log_level: INFO
