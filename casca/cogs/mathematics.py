@@ -4,11 +4,11 @@ import time
 import discord
 from discord.ext import commands
 
-from casca.constants import faces, compliments, brawl, victor_message, facts
+from casca.constants import faces, compliments, brawl, victor_message, facts, questions
 from casca.poetry import poems, poetry_index
 
 
-class FunctionMathematics:
+class MidnightDreary:
     def __init__(self, bot):
         self.bot = bot
 
@@ -37,7 +37,7 @@ class FunctionMathematics:
         try:
             await self.bot.say(faces[choice])
         except:
-            await self.bot.say("ERROR OCCURRED")
+            await self.bot.say("ERROR OCCURED")
 
     @commands.command(name="p_index", pass_context=True)
     async def p_index(self, ctx):
@@ -54,7 +54,10 @@ class FunctionMathematics:
         """
         smile = str(compliments[random.randint(0, len(compliments) - 1)])
         await self.bot.delete_message(ctx.message)
-        await self.bot.say(target.mention + " " + smile)
+        try:
+            await self.bot.say(smile % (target.mention))
+        except discord.InvalidArgument:
+            await self.bot.say("```ERROR: Please enter a user to compliment```")
 
     @commands.command(aliases=["fight"], pass_context=True)
     async def gladiator(self, ctx, brawler: discord.Member, challenger: discord.Member):
@@ -83,38 +86,23 @@ class FunctionMathematics:
         await self.bot.delete_message(ctx.message)
         suggestion_file = open("suggestion.txt", "a+")
         if "\n" not in suggestion:
-            suggestion_file.write("[{}] {} \n".format(time.strftime("%d.%m.%y %H:%M:%S"), suggestion))
+            suggestion_file.write("[" + time.strftime("%d.%m.%y %H:%M:%S") + "] " + suggestion + "\n")
         else:
-            suggestion_file.write("[{}] {}".format(time.strftime("%d.%m.%y %H:%M:%S"), suggestion))
+            suggestion_file.write("[" + time.strftime("%d.%m.%y %H:%M:%S") + "] " + suggestion)
         suggestion_file.close()
 
     @commands.command(aliases=["learn"], pass_context=True)
     async def fact(self, ctx, number: int = 0):
         "Displays a random fact"
+        await self.bot.delete_message(ctx.message)
         if number == 0:
-            await self.bot.delete_message(ctx.message)
-            await self.bot.say("```{}```".format(random.choice(facts)))
+            await self.bot.say("```" + random.choice(facts) + "```")
         else:
             if number in range(1, len(facts) + 1):
-                await self.bot.delete_message(ctx.message)
-                await self.bot.say("```{}```".format(facts[number - 1]))
-
-    @commands.command(name="rich", pass_context=True)
-    async def special(self, ctx, title: str, name: str, *, value: str):
-        """
-        Embeds text.
-        """
-        embed = discord.Embed()
-        embed.colour = 0x738bd7
-
-        await self.bot.delete_message(ctx.message)
-        embed.title = title
-        embed.add_field(name=name, value=value)
-
-        await self.bot.say(embed=embed)
+                await self.bot.say("```" + facts[number - 1] + "```")
 
     @commands.command(name="info", pass_context=True)
-    async def special(self, ctx):
+    async def info(self, ctx):
         """
         Displays information on MidnightDreary.
         """
@@ -139,9 +127,59 @@ class FunctionMathematics:
         await self.bot.delete_message(ctx.message)
         suggestion_file = open("suggestion.txt", "r")
         suggestion_text = suggestion_file.read()
-        await self.bot.say("```{}```".format(suggestion_text ))
+        await self.bot.say("```" + suggestion_text + "```")
         suggestion_file.close()
+
+    @commands.command(alises=["question"], pass_context=True)
+    async def quiz(self, ctx, number: int = 0):
+        "Poses a random question"
+        if number == 0:
+            await self.bot.delete_message(ctx.message)
+            await self.bot.say("```" + random.choice(questions) + "```")
+        else:
+            if number in range(1, len(facts) + 1):
+                await self.bot.delete_message(ctx.message)
+                await self.bot.say("```" + questions[number - 1] + "```")
+
+    @commands.command(aliases=["search", "browse"], pass_context=True)
+    async def google(self, ctx, search: str = "Discord"):
+        """
+         Creates a Google search URL
+        """
+        search_term = "+".join(search.split(" "))
+        await self.bot.delete_message(ctx.message)
+        await self.bot.say("```Your Google URL has been created:```")
+        await self.bot.say("https://www.google.de/search?q=" + search_term)
+
+    @commands.command(aliases=["rich"], pass_context=True)
+    async def special(self, ctx, title: str, name: str, *, value: str):
+        """
+        Embeds text.
+        """
+        embed = discord.Embed()
+        embed.colour = 0x738bd7
+
+        await self.bot.delete_message(ctx.message)
+        embed.title = title
+        embed.add_field(name=name, value=value)
+
+        await self.bot.say(embed=embed)
+
+    @commands.command(aliases=["count"], pass_context=True)
+    async def stats(self, ctx):
+        """
+         Displays statistics.
+        """
+        await self.bot.delete_message(ctx.message)
+        display = """```python
+            COMPLIMENTS: %s
+            EMOJI: %s
+            FACTS: %s
+            POEMS: %s
+            QUESTIONS: %s```""" % (
+        str(len(compliments)), str(len(faces)), str(len(facts)), str(len(poems)), str(len(questions)))
+        await self.bot.say(display)
 
 
 def setup(bot):
-    bot.add_cog(FunctionMathematics(bot))
+    bot.add_cog(MidnightDreary(bot))
