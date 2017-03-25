@@ -6,6 +6,7 @@ import sys
 import discord
 import logbook
 import yaml
+from discord.ext import commands
 from discord.ext.commands import Bot
 from logbook import Logger
 from logbook import StreamHandler
@@ -95,6 +96,11 @@ class Casca(Bot):
                     message))
 
         await super().on_message(message)
+
+    async def on_command_error(self, e, ctx):
+        if isinstance(e, (commands.errors.BadArgument, commands.errors.MissingRequiredArgument)):
+            await self.send_message(ctx.message.channel, "```ERROR: {}```".format(' '.join(e.args)))
+            return
 
     def run(self):
         try:

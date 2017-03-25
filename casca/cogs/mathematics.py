@@ -37,7 +37,7 @@ class MidnightDreary:
         try:
             await self.bot.say(faces[choice])
         except:
-            await self.bot.say("ERROR OCCURED")
+            await self.bot.say("ERROR OCCURRED")
 
     @commands.command(name="p_index", pass_context=True)
     async def p_index(self, ctx):
@@ -55,7 +55,7 @@ class MidnightDreary:
         smile = str(compliments[random.randint(0, len(compliments) - 1)])
         await self.bot.delete_message(ctx.message)
         try:
-            await self.bot.say(smile % (target.mention))
+            await self.bot.say(smile + target.mention)
         except discord.InvalidArgument:
             await self.bot.say("```ERROR: Please enter a user to compliment```")
 
@@ -85,10 +85,11 @@ class MidnightDreary:
         "Permits for the suggestion of new features / changes"
         await self.bot.delete_message(ctx.message)
         suggestion_file = open("suggestion.txt", "a+")
+        _time = time.strftime("%d.%m.%y %H:%M:%S")
         if "\n" not in suggestion:
-            suggestion_file.write("[" + time.strftime("%d.%m.%y %H:%M:%S") + "] " + suggestion + "\n")
+            suggestion_file.write("[{}] {} \n".format(_time, suggestion))
         else:
-            suggestion_file.write("[" + time.strftime("%d.%m.%y %H:%M:%S") + "] " + suggestion)
+            suggestion_file.write("[{}] {}".format(_time, suggestion))
         suggestion_file.close()
 
     @commands.command(aliases=["learn"], pass_context=True)
@@ -96,10 +97,10 @@ class MidnightDreary:
         "Displays a random fact"
         await self.bot.delete_message(ctx.message)
         if number == 0:
-            await self.bot.say("```" + random.choice(facts) + "```")
+            await self.bot.say("```{}```".format(random.choice(facts)))
         else:
             if number in range(1, len(facts) + 1):
-                await self.bot.say("```" + facts[number - 1] + "```")
+                await self.bot.say("```{}```".format(facts[number - 1]))
 
     @commands.command(name="info", pass_context=True)
     async def info(self, ctx):
@@ -127,7 +128,7 @@ class MidnightDreary:
         await self.bot.delete_message(ctx.message)
         suggestion_file = open("suggestion.txt", "r")
         suggestion_text = suggestion_file.read()
-        await self.bot.say("```" + suggestion_text + "```")
+        await self.bot.say("```{}```".format(suggestion_text))
         suggestion_file.close()
 
     @commands.command(alises=["question"], pass_context=True)
@@ -135,11 +136,11 @@ class MidnightDreary:
         "Poses a random question"
         if number == 0:
             await self.bot.delete_message(ctx.message)
-            await self.bot.say("```" + random.choice(questions) + "```")
+            await self.bot.say("```{}```".format(random.choice(questions)))
         else:
             if number in range(1, len(facts) + 1):
                 await self.bot.delete_message(ctx.message)
-                await self.bot.say("```" + questions[number - 1] + "```")
+                await self.bot.say("```{}```".format(questions[number - 1]))
 
     @commands.command(aliases=["search", "browse"], pass_context=True)
     async def google(self, ctx, search: str = "Discord"):
@@ -177,7 +178,7 @@ class MidnightDreary:
             FACTS: %s
             POEMS: %s
             QUESTIONS: %s```""" % (
-        str(len(compliments)), str(len(faces)), str(len(facts)), str(len(poems)), str(len(questions)))
+            str(len(compliments)), str(len(faces)), str(len(facts)), str(len(poems)), str(len(questions)))
         await self.bot.say(display)
 
 

@@ -78,3 +78,5 @@ Morituri te salutant!
 victor_message = """
 ```After a long and challenging duel, a victor has emerged!```
 **WINNER:** """
+
+questions = ""
