@@ -50,7 +50,7 @@ class MidnightDreary:
         """
         smile = str(compliments[random.randint(0, len(compliments) - 1)])
         try:
-            await self.bot.say(smile + target.mention)
+            await self.bot.say(smile.format(target.mention))
         except discord.InvalidArgument:
             await self.bot.say("```ERROR: Please enter a user to compliment```")
 
