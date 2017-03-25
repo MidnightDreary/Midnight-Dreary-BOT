@@ -1,18 +1,18 @@
 compliments = [
-"%s is awesome!",
-"%s is the best ^-^",
-"%s is really cool!",
-"%s is one of the greatest people I know :blush:",
-"%s makes me smile :)",
-"%s deserves a hug ^^",
-"%s should be thanked more often. Thank you!",
-"%s is an inspiration to me :trophy:",
-"I hope you continue to stay awesome, %s!",
-"There are few people I appreciate more than you, %s!",
-"Meeting you has made my life better, %s!",
-"I'm glad I met you, %s!",
-"The world needs more people like %s ^_^",
-"There are few people as deserving of compliments as %s :)"
+"{} is awesome!",
+"{} is the best ^-^",
+"{} is really cool!",
+"{} is one of the greatest people I know :blush:",
+"{} makes me smile :)",
+"{} deserves a hug ^^",
+"{} should be thanked more often. Thank you!",
+"{} is an inspiration to me :trophy:",
+"I hope you continue to stay awesome, {}!",
+"There are few people I appreciate more than you, {}!",
+"Meeting you has made my life better, {}!",
+"I'm glad I met you, {}!",
+"The world needs more people like {} ^_^",
+"There are few people as deserving of compliments as {} :)"
 ]
 facts = [
 "DID YOU KNOW? #001 | Your mouth and anus are connected with one uninterruped tube. As a result, your stomach, lungs, and other organs can be considered as external.",
@@ -78,5 +78,3 @@ Morituri te salutant!
 victor_message = """
 ```After a long and challenging duel, a victor has emerged!```
 **WINNER:** """
-
-questions = ""
