@@ -55,7 +55,7 @@ class MidnightDreary:
         smile = str(compliments[random.randint(0, len(compliments) - 1)])
         await self.bot.delete_message(ctx.message)
         try:
-            await self.bot.say(smile % (target.mention))
+            await self.bot.say(smile + target.mention)
         except discord.InvalidArgument:
             await self.bot.say("```ERROR: Please enter a user to compliment```")
 
@@ -178,7 +178,7 @@ class MidnightDreary:
             FACTS: %s
             POEMS: %s
             QUESTIONS: %s```""" % (
-        str(len(compliments)), str(len(faces)), str(len(facts)), str(len(poems)), str(len(questions)))
+            str(len(compliments)), str(len(faces)), str(len(facts)), str(len(poems)), str(len(questions)))
         await self.bot.say(display)
 
 
