@@ -102,6 +102,9 @@ class Casca(Bot):
             await self.send_message(ctx.message.channel, "```ERROR: {}```".format(' '.join(e.args)))
             return
 
+    async def on_command(self, command, ctx):
+        await self.delete_message(ctx.message)
+
     def run(self):
         try:
             super().run(self.config["bot"]["token"], bot=True)
