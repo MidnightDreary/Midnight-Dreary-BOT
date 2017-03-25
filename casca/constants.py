@@ -25,6 +25,18 @@ facts = [
     "DID YOU KNOW? #014 | Easter Sunday is always held on the Sunday on or following the first full moon after the vernal equinox.",
     "DID YOU KNOW? #015 | Pangaea was a supercontinent that existed between the late Paleozoic and early Mesozoic eras. It was surrounded by the superocean named Panthalassa. It was formed by the collision of the supercontinents Gondwana and Laurisia."
 ]
+questions = [
+"QUESTION #001 | What is the capital city of Uruguay?",
+"QUESTION #002 | Which is the tallest mountain in the world from base to peak?",
+"QUESTION #003 | In our solar system, which planet is 6th from the sun?",
+"QUESTION #004 | While at CERN, which computer scientist invented the internet, which was made public on the 6th of August 1991?",
+"QUESTION #005 | Which exponent is required to turn the number 10 into a googol?",
+"QUESTION #006 | How many actors have portrayed secret agent James Bond in a non spin-off movie?",
+"QUESTION #007 | Who was the first true king of a united England?",
+"QUESTION #008 | In Greek mythology, which name is given to the ferryman of the underworld?",
+"QUESTION #009 | What name was given to Mahatma Ghandi upon his birth?",
+"QUESTION #010 | True or false? Alaska is the most northern, eastern, and western state in the United States of America."
+]
 
 faces = {
     "wut": "```ಠ_ಠ```",
