@@ -1253,6 +1253,43 @@ sonnet_18 = [
     When in eternal lines to time thou grow’st;
     So long as men can breathe or eyes can see,
     So long lives this, and this gives life to thee.```"""]
+dulce_et_decorum = [
+"""
+```Bent double, like old beggars under sacks,
+Knock-kneed, coughing like hags, we cursed through sludge,
+Till on the haunting flares we turned our backs,
+And towards our distant rest began to trudge.
+Men marched asleep. Many had lost their boots,
+But limped on, blood-shod. All went lame; all blind;
+Drunk with fatigue; deaf even to the hoots
+Of gas-shells dropping softly behind.```""",
+
+"""
+```Gas! GAS! Quick, boys!—An ecstasy of fumbling
+Fitting the clumsy helmets just in time,
+But someone still was yelling out and stumbling
+And flound’ring like a man in fire or lime.
+Dim through the misty panes and thick green light,
+As under a green sea, I saw him drowning```""",
+
+"""
+```In all my dreams before my helpless sight,
+He plunges at me, guttering, choking, drowning.```""",
+
+"""
+```If in some smothering dreams, you too could pace
+Behind the wagon that we flung him in,
+And watch the white eyes writhing in his face,
+His hanging face, like a devil’s sick of sin;
+If you could hear, at every jolt, the blood
+Come gargling from the froth-corrupted lungs,
+Obscene as cancer, bitter as the cud
+Of vile, incurable sores on innocent tongues,—
+My friend, you would not tell with such high zest
+To children ardent for some desperate glory,
+The old Lie: Dulce et decorum est
+Pro patria mori.```"""
+]
 
 poems = [
     Literature("Edgar Allan Poe", "The Raven", the_raven, "the raven"),
@@ -1273,7 +1310,8 @@ poems = [
     Literature("Robert Frost", "The Road Not Taken", road_not_taken, "road not taken"),
     Literature("Percy Bysshe Shelley", "Ozymandias", ozymandias, "ozymandias"),
     Literature("William Wordsworth", "Daffodils", daffodils, "daffodils"),
-    Literature("William Shakespeare", "Sonnet 18", sonnet_18, "sonnet 18")
+    Literature("William Shakespeare", "Sonnet 18", sonnet_18, "sonnet 18"),
+    Literature("Wilfred Owen", "Dulce et Decorum est", dulce_et_decorum, "dulce et decorum")
 ]
 poetry_index = """
 ```python
@@ -1335,5 +1373,9 @@ SYNTAX: "daffodils"
 
 AUTHOR: "William Shakespeare"
 POEM: "Sonnet 18"
-SYNTAX: "sonnet 18"```
+SYNTAX: "sonnet 18"
+
+AUTHOR: "Wilfred Owen"
+POEM: "Dulce et Decorum est"
+SYNTAX: "dulce et decorum"```
 """
