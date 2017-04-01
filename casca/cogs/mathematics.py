@@ -163,6 +163,17 @@ class MidnightDreary:
             (len(compliments)), (len(faces)), (len(facts)), (len(poems)), (len(questions)))
         await self.bot.say(display)
 
+    @commands.command(aliases=["dict"])
+    async def define(self, language: str, search : str):
+        """
+        Define a word.
+        """
+        if language.lower() == "german":
+            await self.bot.say("```Your Duden URL has been created:```")
+            await self.bot.say("http://www.duden.de/rechtschreibung/{}".format(search.lower()))
+        elif language.lower() == "english":
+            await self.bot.say("```Your Dictionary.com URL has been created:```")
+            await self.bot.say("http://www.dictionary.com/browse/{}".format(search.lower()))
 
 def setup(bot):
     bot.add_cog(MidnightDreary(bot))
