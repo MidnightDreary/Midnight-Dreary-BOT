@@ -31,10 +31,7 @@ class MidnightDreary:
     @commands.command(aliases=["emoji", "face", "ascii"])
     async def draw(self, choice: str):
         """Allows for the sending of ASCII emoji"""
-        try:
-            await self.bot.say(faces[choice])
-        except:
-            await self.bot.say("ERROR OCCURRED")
+        await self.bot.say(faces[choice])
 
     @commands.command(name="p_index")
     async def p_index(self):
@@ -49,10 +46,7 @@ class MidnightDreary:
         Share some love.
         """
         smile = str(compliments[random.randint(0, len(compliments) - 1)])
-        try:
-            await self.bot.say(smile.format(target.mention))
-        except discord.InvalidArgument:
-            await self.bot.say("```ERROR: Please enter a user to compliment```")
+        await self.bot.say(smile.format(target.mention))
 
     @commands.command(aliases=["fight"])
     async def gladiator(self, brawler: discord.Member, challenger: discord.Member):
@@ -164,7 +158,7 @@ class MidnightDreary:
         await self.bot.say(display)
 
     @commands.command(aliases=["dict"])
-    async def define(self, language: str, search : str):
+    async def define(self, language: str, search: str):
         """
         Define a word.
         """
@@ -176,7 +170,7 @@ class MidnightDreary:
             await self.bot.say("http://www.dictionary.com/browse/{}".format(search.lower()))
 
     @commands.command(aliases=["rockpaperscissors"])
-    async def rps(self, choice : str):
+    async def rps(self, choice: str):
         """
         Rock Paper Scissors
         """
@@ -185,6 +179,7 @@ class MidnightDreary:
 YOUR CHOICE: "{}"
 MY CHOICE:   "{}"```""".format(choice.upper(), reply.upper())
         await self.bot.say(response)
+
 
 def setup(bot):
     bot.add_cog(MidnightDreary(bot))
