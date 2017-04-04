@@ -175,5 +175,16 @@ class MidnightDreary:
             await self.bot.say("```Your Dictionary.com URL has been created:```")
             await self.bot.say("http://www.dictionary.com/browse/{}".format(search.lower()))
 
+    @commands.command(aliases=["rockpaperscissors"])
+    async def rps(self, choice : str):
+        """
+        Rock Paper Scissors
+        """
+        reply = random.choice(["Rock", "Paper", "Scissors"])
+        response = """```python
+YOUR CHOICE: "{}"
+MY CHOICE:   "{}"```""".format(choice.upper(), reply.upper())
+        await self.bot.say(response)
+
 def setup(bot):
     bot.add_cog(MidnightDreary(bot))
