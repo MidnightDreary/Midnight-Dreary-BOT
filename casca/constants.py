@@ -44,7 +44,27 @@ facts = [
 "DID YOU KNOW? #027 | The characters in A. A. Milne's Winnie the Pooh all represent a mental disorder.",
 "DID YOU KNOW? #028 | Dividing the length of the longer side on an A-series piece of paper by the shorter side results in the square root of 2.",
 "DID YOU KNOW? #029 | Publius Servilius Casca was the first conspirator to stab Gaius Julius Caesar in 44 BC.",
-"DID YOU KNOW? #030 | William Shakespeare introduced over 1700 words into the English language."
+"DID YOU KNOW? #030 | William Shakespeare introduced over 1700 words into the English language.",
+"DID YOU KNOW? #031 | There have been five mass extinction events on Earth: the Ordovician-Silurian extinction, the Late Devonian extinction, the Permian-Triassic extinction, the Triassic-Jurassic extinction, and the Cretaceous-Paleogene extinction.",
+"DID YOU KNOW? #032 | Pterosaurs, such as pterodactlyus, quetzalcoatlus, or pteranodon, weren't dinosaurs. Instead, they belonged to the now-extinct order Pterosauria.",
+"DID YOU KNOW? #033 | Musa I of Mali, king between 1312-1337, was the wealthiest man to ever live. Egypt's economy almost collapsed after he generously threw gold coins about whilst on his pilgrimage to Mecca. The sudden influx in gold caused it to lose almost all of its worth.",
+"DID YOU KNOW? #034 | Pablo Picasso's full name was Pablo Diego José Francisco de Paula Juan Nepomuceno María de los Remedios Cipriano de la Santísima Trinidad Ruiz y Picasso.",
+"DID YOU KNOW? #035 | Vesna Vulović holds the world record for the highest fall survived without a parachute. When the plane she was working on as an Aerotransport hostess exploded in 1972, she fell 10,160 metres.",
+"DID YOU KNOW? #036 | A man calling himself DB Cooper boarded a Boeing 727 aircraft, whilst carrying a bomb in his suitcase in 1971. He hijacked the plane and demanded that it land, allowing the passengers off board. He ordered that 10,000 unmarked 20 dollar bills and four parachutes be brought before the plane took off again, as well as telling all crew to remain in the cockpit. At approximately 8:00 pm, the airstair opened, and Cooper jumped.",
+"DID YOU KNOW? #037 | The longest interval of time between the birth of two twins was 87 days.",
+"DID YOU KNOW? #038 | UY Scuti is the largest star discovered to date, with an estimated solar mass of 1,708.",
+"DID YOU KNOW? #039 | Buzz Aldrin is the first man to ever urinate on the lunar surface, shortly after becoming the second man to ever set foot on the moon.",
+"DID YOU KNOW? #040 | In the city of Strasbourg, France, in 1518, hundreds of citizens started to inexplicably dance. This continued for days, with many collapsing of fatigue, and some even dying.",
+"DID YOU KNOW? #041 | The embalmed head of English explorer Sir Walter Raleigh was presented to his wife, who supposedly kept it in a velvet bag until her death.",
+"DID YOU KNOW? #042 | Sharks are responsible for an estimated 10 human deaths each year. Humans, on the other hand, are responsible for at least 100 million shark deaths annually.",
+"DID YOU KNOW? #043 | Will Keith Kellogg, the founder of cereal manufacturer Kellogg's, invented Corn Flakes in 1878, because he believed that a bland diet would lead to people masturbating less.",
+"DID YOU KNOW? #044 | A study carried out by the Institute of Forensic Genetics at the University of Copenhagen has found that all blue-eyed people share a common ancestor, who lived 6,000-10,000 years ago.",
+"DID YOU KNOW? #045 | 65% of the human population is lactose intolerant.",
+"DID YOU KNOW? #046 | 99% of the body is made up of only six elements: oxygen, carbon, hydrogen, nitrogen, calcium, and phosphorus",
+"DID YOU KNOW? #047 | Gone with the Wind (1939) was the first colour film to win an Academy Award.",
+"DID YOU KNOW? #048 | There are 206 bones in the human body.",
+"DID YOU KNOW? #049 | The three men involved in the Apollo 11 mission, which first landed man on the moon, were: Neil Armstrong, Buzz Aldrin, and Michael Collins.",
+"DID YOU KNOW? #050 | Marie Curie is the only woman to ever be awarded two Nobel Prizes, receiving the Nobel Prize for Physics in 1903, and the Nobel Prize for Chemistry in 1911."
 ]
 questions = [
 "QUESTION #001 | What is the capital city of Uruguay?",
