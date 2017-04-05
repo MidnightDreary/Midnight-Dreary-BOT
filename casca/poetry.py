@@ -10,14 +10,14 @@ class Literature:
         if stanza in range(1, len(self.poem_list) + 1):
             self.header = """```python
 AUTHOR: "%s" | TITLE: "%s [Stanza %s]```""" % (self.author, self.title, str(stanza))
-            self.stanza_text = self.poem_list[stanza - 1]
+            stanza_text = self.poem_list[stanza - 1]
 
-            self.poem_object = {
+            poem_object = {
                 "header": self.header,
-                "text": self.stanza_text
+                "text": stanza_text
             }
 
-            return self.poem_object
+            return poem_object
 
 
 the_raven = [
